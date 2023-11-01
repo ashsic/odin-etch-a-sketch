@@ -1,0 +1,27 @@
+/* Universal styles */
+
+
+/* Header styles */
+
+/* Main section styles */
+
+.square {
+    border: 1px solid black;
+    width: 58px;
+    height: 58px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    height: 960px;
+    width: 960px;
+    border: 2px dotted black;
+}
+
+/* Footer styles */

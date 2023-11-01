@@ -1,14 +1,40 @@
 /* Universal styles */
 
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
 
 /* Header styles */
+header {
+    display: flex;
+    justify-content: center;
+}
 
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+
+}
 /* Main section styles */
 
+main {
+    display:flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
 .square {
-    border: 1px solid black;
-    width: 58px;
-    height: 58px;
+    width: 30px;
+    height: 30px;
 }
 
 .row {
@@ -19,9 +45,16 @@
 #game {
     display: flex;
     flex-direction: column;
-    height: 960px;
-    width: 960px;
+    height: 480px;
+    width: 480px;
     border: 2px dotted black;
 }
 
 /* Footer styles */
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    flex: 1;
+}

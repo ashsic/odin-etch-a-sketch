@@ -13,11 +13,19 @@
 
     <main>
         <section id="control-panel">
-            <form action="placeholder.py" method="POST">
-                <input name="squares">
-                <input type="submit" value="Apply">
-                <input type="checkbox">
-                <input type="checkbox">
+            <form name="options" action="placeholder.py" method="POST">
+                <input name="numOfSquares" type="range" value="16" min="1" max="100" step="1">
+                <span id="numOfSquares-text">16</span>
+                <div class="flex-container">
+                    <span>Rainbow:</span>
+                    <input type="checkbox" name="rainbowSquares">
+                </div>
+                <div class="flex-container">
+                    <span>Shading:</span>
+                    <input type="checkbox" name="darkeningEffect">
+                </div>
+                <button name="testButton">Apply</button>
+                <!-- <input type="submit" value="Apply"> -->
             </form>
         </section>
 

@@ -12,6 +12,7 @@ body {
 header {
     display: flex;
     justify-content: center;
+    padding-bottom: 48px;
 }
 
 h1 {
@@ -30,6 +31,14 @@ form {
     display: flex;
     flex-direction: column;
     padding: 32px;
+    justify-content: space-around;
+    height: 200px;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
 }
 
 .square {

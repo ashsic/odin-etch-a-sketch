@@ -1,6 +1,20 @@
 // Main.js
 
-let rainbowSquares = true;
+let rainbowSquares = false;
+let darkeningEffect = false;
+
+document.forms.options.testButton.addEventListener("click", monitorForm);
+function monitorForm(event){
+    event.preventDefault();
+    document.querySelector("#game").textContent = "";
+    buildGame(document.forms.options.numOfSquares.value);
+    rainbowSquares = document.forms.options.rainbowSquares.checked;
+    darkeningEffect = document.forms.options.darkeningEffect.checked;
+}
+
+document.forms.options.numOfSquares.addEventListener("input", function monitorSlider(event){
+    document.querySelector("#numOfSquares-text").textContent = event.target.value;
+})
 
 function colorSquareOnHover(event){
     event.target.style.backgroundColor = "black";
@@ -10,6 +24,9 @@ function colorSquareOnHover(event){
         let blue = Math.floor(Math.random() * 256);
         randomColor = "rgb(" + red + "," + green + "," + blue + ")";
         event.target.style.backgroundColor = randomColor;
+    }
+    if (darkeningEffect && event.target.style.opacity < 1){
+        event.target.style.opacity = (parseFloat(event.target.style.opacity) + 0.1).toString();
     }
 }
 
@@ -23,6 +40,9 @@ function buildGame(lengthOfSide){
             square.setAttribute("class", "square");
             square.style.width = `${(480 / lengthOfSide)}px`;
             square.style.height = `${(480 / lengthOfSide)}px`;
+            if (darkeningEffect) {
+                square.style.opacity = '0';
+            }
             square.addEventListener("mouseover", colorSquareOnHover);
             row.appendChild(square);
         }
@@ -30,4 +50,4 @@ function buildGame(lengthOfSide){
     }
 }
 
-buildGame(32);
+buildGame(16);
